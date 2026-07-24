@@ -37,7 +37,7 @@ Each `Song` in the system stores:
 * Genre
 * Mood
 * Energy
-* Tempo (BPM)
+* 
 
 These features help describe the style, feeling, and intensity of a song.
 
@@ -48,7 +48,7 @@ Each `UserProfile` stores a user's preferred:
 * Genre
 * Mood
 * Energy level
-* Tempo (BPM)
+
 
 These preferences represent the type of music the user wants to hear.
 
@@ -144,6 +144,83 @@ Because: similar energy (+14.3)
 #   3. ...
 ```
 
+```
+Loaded songs: 20
+
+====================
+High-Energy Pop
+====================
+Sunrise City - Score: 74.55
+Because: genre match (+40), mood match (+20), similar energy (+14.5)
+
+Gym Hero - Score: 53.80
+Because: genre match (+40), similar energy (+13.8)
+
+Rooftop Lights - Score: 33.65
+Because: mood match (+20), similar energy (+13.7)
+
+Concrete Dreams - Score: 15.00
+Because: similar energy (+15.0)
+
+Circuit Bloom - Score: 14.25
+Because: similar energy (+14.3)
+
+
+====================
+Chill Lofi
+====================
+Midnight Coding - Score: 74.70
+Because: genre match (+40), mood match (+20), similar energy (+14.7)
+
+Library Rain - Score: 74.25
+Because: genre match (+40), mood match (+20), similar energy (+14.2)
+
+Focus Flow - Score: 55.00
+Because: genre match (+40), similar energy (+15.0)
+
+Spacewalk Thoughts - Score: 33.20
+Because: mood match (+20), similar energy (+13.2)
+
+Coffee Shop Stories - Score: 14.55
+Because: similar energy (+14.5)
+
+
+====================
+Deep Intense Rock
+====================
+Storm Runner - Score: 74.85
+Because: genre match (+40), mood match (+20), similar energy (+14.8)
+
+Gym Hero - Score: 34.55
+Because: mood match (+20), similar energy (+14.5)
+
+Iron Verdict - Score: 33.95
+Because: mood match (+20), similar energy (+14.0)
+
+Neon Pulse - Score: 14.40
+Because: similar energy (+14.4)
+
+Concrete Dreams - Score: 14.25
+Because: similar energy (+14.2)
+
+
+Top recommendations:
+
+Storm Runner - Score: 74.85
+Because: genre match (+40), mood match (+20), similar energy (+14.8)
+
+Gym Hero - Score: 34.55
+Because: mood match (+20), similar energy (+14.5)
+
+Iron Verdict - Score: 33.95
+Because: mood match (+20), similar energy (+14.0)
+
+Neon Pulse - Score: 14.40
+Because: similar energy (+14.4)
+
+Concrete Dreams - Score: 14.25
+Because: similar energy (+14.2)
+```
 **Screenshot or video** *(optional)*: <!-- Insert a screenshot or demo video link here -->
 
 ---
@@ -178,10 +255,9 @@ Read and complete `model_card.md`:
 
 [**Model Card**](model_card.md)
 
-Write 1 to 2 paragraphs here about what you learned:
+This project helped me understand how recommendation systems transform user preferences into ranked suggestions. By building a content-based recommender from scratch, I learned how song features such as genre, mood, and energy can be converted into numerical scores that determine which songs are recommended. I also saw how the choice of feature weights can significantly influence results. For example, giving genre a high weight made it one of the strongest factors in determining recommendations.
 
-- about how recommenders turn data into predictions
-- about where bias or unfairness could show up in systems like this
+Another important lesson was that even simple algorithms can produce recommendations that feel personalized. At the same time, testing edge cases showed the limitations of a basic recommender. The system could become biased toward familiar genres, struggle with unknown preferences, and produce unexpected results when given invalid inputs. These experiments helped me better understand why real-world recommendation systems use larger datasets, additional features, user feedback, and more sophisticated algorithms to improve accuracy and diversity.
 
 
 
